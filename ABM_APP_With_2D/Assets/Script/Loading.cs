@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Loading : MonoBehaviour
 {
 
-    public Transform masukanLoadingbar;
+    // public Transform masukanLoadingbar;
 
     [SerializeField]
     private float nilaiSekarang;
@@ -17,16 +17,16 @@ public class Loading : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nilaiSekarang < 100)
+        if (nilaiSekarang < 20)
         {
             nilaiSekarang += nilaiKecepatan * Time.deltaTime;
             // Debug.Log((int)nilaiSekarang);
         }
         else
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("SampleScene");
         }
-        masukanLoadingbar.GetComponent<Image>().fillAmount = nilaiSekarang / 100;
+        // masukanLoadingbar.GetComponent<Image>().fillAmount = nilaiSekarang / 100;
 
     }
 }
